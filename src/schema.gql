@@ -1,0 +1,143 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  testNestjsGraphqlSubscription(stringArgsInput: String!): TestGraphqlWsEntities!
+}
+
+type Subscription {
+  subscriptionForTest(id: String!): TestGraphqlWsEntities
+}
+
+type TestCase1MafiaUser {
+  id: String!
+  name: String!
+}
+
+type TestCase1SelectedAnswer {
+  answer: Int
+  id: String
+}
+
+type TestGraphqlWsEmoticon {
+  name: String
+  updatedAt: DateTime
+}
+
+type TestGraphqlWsEntities {
+  createdAt: DateTime!
+  filter: TestGraphqlWsFilter
+  game: TestGraphqlWsGame
+  id: String
+  numberOption1: Float!
+  objectOption1: TestGraphqlWsobjectOption1
+  people: [TestGraphqlWsPeople!]!
+  peopleLooked: [TestGraphqlWsPeople!]
+  statement: String!
+  stringOption1: String!
+  type: String!
+}
+
+type TestGraphqlWsFilter {
+  maxPeople: Int!
+  onlyMyLocationToggle: Boolean
+  onlyMyRailgunOptions1: String
+  onlyMyRailgunOptions2: String
+  onlyMyRailgunOptions3: DateTime
+  onlyMyUnivToggle: Boolean
+  privatePassword: String
+  selectDeptCategoryFemale: String
+  selectDeptCategoryToggle: Boolean
+  selectDeptCategorymale: String
+  selectUnivFemale: String
+  selectUnivMale: String
+  selectUnivToggle: Boolean
+  timeShowing: Float!
+  toggleBoolean: Boolean
+  togglepeopleVisibleOption: Boolean!
+}
+
+type TestGraphqlWsGame {
+  TestCase1: TestGraphqlWsGameTestCase1
+  TestCase2: TestGraphqlWsGameTestCase2
+  TestCase3: TestGraphqlWsGameTestCase3
+  createdAt: String
+  expireAt: String
+  limitedTime: Int!
+  phase: String!
+  testType: String!
+}
+
+type TestGraphqlWsGameTestCase1 {
+  answer: [String!]
+  creation: String
+  isFinished: Boolean
+  mafia: TestCase1MafiaUser
+  selectedAnswer: [TestCase1SelectedAnswer!]
+  selectedMafiaAnswer: Int
+  startUser: String
+  statement: Boolean!
+  type: String!
+}
+
+type TestGraphqlWsGameTestCase2 {
+  creation: String
+  creationReceiver: String
+  creationSender: String
+  index: Int!
+  randomSeed: [Int!]!
+  selectedUser: String
+  statement: Boolean!
+}
+
+type TestGraphqlWsGameTestCase3 {
+  creation: String
+  creationReceiver: String
+  creationSender: String
+  index: Int
+  selectedUser: [String!]
+  statement: Boolean!
+}
+
+type TestGraphqlWsPeople {
+  booleanOption1: Boolean!
+  booleanOption2: Boolean
+  chattingMessageOption1: String!
+  chattingMessageOption2: [String!]!
+  chattingMessageOption3: String!
+  chattingMessageOption4: [String!]!
+  emoticon: TestGraphqlWsEmoticon
+  host: Boolean!
+  id: String!
+  name: String!
+  numberOption1: Float!
+  numberOption2: Int!
+  pictureURL: String!
+  sex: Boolean!
+  stringOption2: String!
+  stringOption3: String!
+  stringOption4: String!
+  voice: TestGraphqlWsPeopleVoice!
+}
+
+type TestGraphqlWsPeopleVoice {
+  selfDeaf: Boolean
+  selfMute: Boolean
+  serverDeaf: Boolean
+  serverMute: Boolean
+  speaking: Boolean
+}
+
+type TestGraphqlWsobjectOption1 {
+  id: String!
+  index: Int!
+  name: String!
+  startedDate: DateTime!
+  statement: Boolean!
+}
